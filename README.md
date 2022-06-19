@@ -1,3 +1,15 @@
+# Bobon所做的修改
+修改了 search.xml，使其能兼容 https://github.com/wujun234/hexo-theme-tree ，实现“树状导航” + “树状目录” + “本地搜索”
+```
+{% for post in posts.toArray() %}
+    {% if post.indexing == undefined or post.indexing %}
+    <entry>
+      <title>{{ post.slug }}</title>
+      <link href="{{ (url + post.path) | uriencode }}"/>
+      <url>{{ (url + post.path) | uriencode }}</url>
+```
+
+
 # hexo-generator-search
 
 [![npm](https://img.shields.io/npm/v/hexo-generator-search.svg)](https://www.npmjs.com/package/hexo-generator-search)
